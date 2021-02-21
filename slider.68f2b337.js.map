@@ -1,0 +1,1 @@
+{"version":3,"sources":["../js/slider.js"],"names":["$","document","ready","slick","arrows","dots"],"mappings":";AACAA,EAAEC,UAAUC,MAAM,WAChBF,EAAE,WAAWG,MAAM,CACjBC,QAAQ,EACRC,MAAM","file":"slider.68f2b337.js","sourceRoot":"..\\src","sourcesContent":["\r\n$(document).ready(function () {\r\n  $('.slider').slick({\r\n    arrows: false,\r\n    dots: true\r\n  });\r\n});"]}
