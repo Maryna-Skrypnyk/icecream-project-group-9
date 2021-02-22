@@ -117,21 +117,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/modal.js":[function(require,module,exports) {
-(function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+})({"../js/top.js":[function(require,module,exports) {
+$(function () {
+  // при нажатии на кнопку scrollup
+  $('.scrollup').click(function () {
+    // переместиться в верхнюю часть страницы
+    $("html, body").animate({
+      scrollTop: 0
+    }, 700);
+  });
+}); // при прокрутке окна (window)
 
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+$(window).scroll(function () {
+  // если пользователь прокрутил страницу более чем на 200px
+  if ($(this).scrollTop() > 200) {
+    // то сделать кнопку scrollup видимой
+    $('.scrollup').fadeIn();
+  } // иначе скрыть кнопку scrollup
+  else {
+      $('.scrollup').fadeOut();
+    }
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -336,5 +342,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/modal.js"], null)
-//# sourceMappingURL=/modal.a33100f4.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/top.js"], null)
+//# sourceMappingURL=/top.51938792.js.map

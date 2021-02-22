@@ -117,10 +117,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/modal.js":[function(require,module,exports) {
+})({"../js/modal1.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtn: document.querySelector('[data-modal-open1]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]')
   };
@@ -128,7 +128,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    document.body.classList.toggle("modal-open");
     refs.modal.classList.toggle('is-hidden');
   }
 })();
@@ -336,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/modal.js"], null)
-//# sourceMappingURL=/modal.a33100f4.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/modal1.js"], null)
+//# sourceMappingURL=/modal1.a56a6a9a.js.map
