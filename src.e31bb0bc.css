@@ -1323,46 +1323,57 @@ header {
 }
 
 .about {
+  padding-top: 125px;
   background-color: #fff5f6;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about {
+    padding-top: 130px;
+  }
+}
+
+.overlay-milk {
   background-image: url("/mob@1x-320.2719bf4f.png");
   background-size: 100%;
-  background-position-y: 90%;
+  background-position: center 640px;
   background-repeat: no-repeat;
-  padding-top: 125px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .about {
+  .overlay-milk {
     background-image: url("/mob@2x-640.77d97ab7.png");
   }
 }
 @media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  .about {
+  .overlay-milk {
     background-image: url("/mob@3x-960.218aec6d.png");
   }
 }
 
 @media screen and (min-width: 768px) {
-  .about {
+  .overlay-milk {
     background-image: none;
   }
 }
-@media screen and (min-width: 1200px) {
-  .about {
+@media screen and (min-width: 1280px) {
+  .overlay-milk {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center 220px;
     background-image: url("/desk@1x-1282.c6bc4d88.png");
     background-size: 100%;
-    background-position-y: 90%;
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .about {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .overlay-milk {
     background-image: url("/desk@2x-2564.142cd651.png");
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
-  .about {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 3), screen and (min-width: 1280px) and (min-resolution: 288dpi), screen and (min-width: 1280px) and (min-resolution: 3dppx) {
+  .overlay-milk {
     background-image: url("/desk@3x-3786.7feddf78.png");
   }
 }
@@ -1426,7 +1437,7 @@ header {
 @media screen and (min-width: 768px) {
   .about-descriptionblock {
     padding: 50px 0px 0px 0px;
-    margin: 0px 0px 0px 17px;
+    margin: 0 0 0 17px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1441,16 +1452,20 @@ header {
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 1.62;
+  letter-spacing: 0;
   color: #000000;
 }
 @media screen and (min-width: 768px) {
   .about-content {
+    width: 340px;
     font-size: 14px;
     line-height: 1.76;
   }
 }
 @media screen and (min-width: 1200px) {
   .about-content {
+    letter-spacing: 0.04em;
+    width: 463px;
     font-size: 16px;
     line-height: 1.76;
   }
@@ -1465,12 +1480,15 @@ header {
 }
 @media screen and (min-width: 768px) {
   .about-article {
+    width: 340px;
     font-size: 14px;
     line-height: 1.76;
   }
 }
 @media screen and (min-width: 1200px) {
   .about-article {
+    letter-spacing: 0.04em;
+    width: 463px;
     font-size: 14px;
     line-height: 1.94;
   }
@@ -1485,14 +1503,15 @@ header {
 }
 @media screen and (min-width: 768px) {
   .about-phrase {
+    margin-bottom: 62px;
     font-size: 14px;
     line-height: 1.76;
-    margin-top: 15px;
-    margin-bottom: 55px;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .about-phrase {
+    letter-spacing: 0.04em;
     font-size: 14px;
     line-height: 1.94;
     margin-bottom: 45px;
