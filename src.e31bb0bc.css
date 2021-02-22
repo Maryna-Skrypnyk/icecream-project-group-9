@@ -436,7 +436,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .main-nav {
@@ -583,11 +583,6 @@ header {
     transition: right 0.3s;
   }
 }
-@media screen and (max-width: 479px) {
-  .menu-container.is-open {
-    width: 100vh;
-  }
-}
 @media screen and (max-width: 1279px) {
   .menu-container.is-open {
     position: fixed;
@@ -604,6 +599,13 @@ header {
     justify-content: flex-end;
     transition: right 0.3s;
   }
+}
+@media screen and (max-width: 1279px) and (max-width: 479px) {
+  .menu-container.is-open {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1279px) {
   .menu-container.is-open .buy_now {
     display: block;
     margin: 60px 34px 25px;
@@ -613,9 +615,13 @@ header {
     transform: scale(1, 1);
     transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
   }
+}
+@media screen and (max-width: 1279px) {
   .menu-container.is-open .main-menu {
     display: block;
   }
+}
+@media screen and (max-width: 1279px) {
   .menu-container.is-open .menu-item {
     opacity: 1;
     transform: translateX(0);
@@ -697,6 +703,12 @@ header {
 
 .icon-arrow {
   margin-left: 12px;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .container-hero {
@@ -1335,7 +1347,7 @@ header {
 .overlay-milk {
   background-image: url("/mob@1x-320.2719bf4f.png");
   background-size: 100%;
-  background-position: center 640px;
+  background-position: center 600px;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
@@ -1495,7 +1507,7 @@ header {
 }
 
 .about-phrase {
-  margin-top: 5px;
+  margin-top: 0;
   margin-bottom: 23px;
   font-size: 12px;
   line-height: 1.62;
@@ -2536,7 +2548,7 @@ header {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden.modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
