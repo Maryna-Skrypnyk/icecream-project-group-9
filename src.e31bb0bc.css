@@ -775,6 +775,12 @@ body {
   font-size: 48px;
   line-height: 0.97;
   color: #d41443;
+  transition-property: text-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-title-colored:hover, .hero-title-colored:focus {
+  text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #ffa5ba, 0px 0px 25px #ffa5ba, 0px 0px 25px #ffa5ba, 0px 0px 25px #d41342, 0px 0px 25px #d41342, 0px 0px 50px #d41342, 0px 0px 50px #ffa5ba, 0px 0px 50px #ffa5ba, 0px 0px 150px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba;
 }
 @media screen and (min-width: 768px) {
   .hero-title-colored {
@@ -798,6 +804,9 @@ body {
   line-height: 1.25;
   z-index: 20;
   cursor: pointer;
+  transition-property: color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1280px) {
   .hero-button-primary,
@@ -838,6 +847,9 @@ body {
   background-color: #ffffff;
   color: #d41443;
   border-color: transparent;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 1280px) {
   .hero-button-secondary {
@@ -853,7 +865,6 @@ body {
 }
 .hero-button-secondary:focus, .hero-button-secondary:hover {
   background-color: #ecebeb;
-  color: #d41443;
   outline: 0;
   box-shadow: 0 0 10px 0 #d41443;
 }
@@ -887,6 +898,9 @@ body {
 
 .hero-button-more {
   display: none;
+  transition-property: background-color, background-image;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .hero-button-more {
@@ -1007,6 +1021,11 @@ body {
   .hero-advantages-trucks {
     margin-right: 50px;
   }
+}
+.hero-advantages-number {
+  transition-property: text-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .hero-advantages-number {
@@ -1131,7 +1150,7 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-title {
-    margin-bottom: 150px;
+    margin-bottom: 180px;
     font-size: 34px;
     line-height: 1.15;
   }
@@ -1184,7 +1203,10 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item {
-    max-width: 280px;
+    width: 100%;
+  }
+  .products-item:not(:first-child) {
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1200,6 +1222,11 @@ body {
 
 .products-item:not(:last-child) {
   margin-bottom: 160px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .products-item:not(:last-child) {
+    margin-bottom: 180px;
+  }
 }
 @media screen and (min-width: 768px) {
   .products-item:not(:last-child) {
@@ -1226,18 +1253,18 @@ body {
 
 .products-image:hover,
 .products-image:focus {
-  animation: animateIM 2000ms infinite 500ms;
+  animation: animateIM 3000ms infinite 100ms;
 }
 
 @keyframes animateIM {
   0% {
-    transform: scale(1.25);
+    transform: scale(1);
   }
   50% {
     transform: scale(0.5);
   }
   100% {
-    transform: scale(1.25);
+    transform: scale(1);
   }
 }
 .products-item-title {
@@ -1313,12 +1340,14 @@ body {
   background-position: center;
   background-image: url("https://img.icons8.com/metro/26/fa314a/long-arrow-right.png");
   background-repeat: no-repeat;
-  animation: animate 3000ms infinite 1000ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-button:focus, .products-button:hover {
   background-color: #d41443;
   background-image: url("https://img.icons8.com/metro/26/ffffff/long-arrow-right.png");
-  animation: paused;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-button {
@@ -1328,17 +1357,6 @@ body {
 @media screen and (min-width: 768px) {
   .products-button {
     margin-top: 50px;
-  }
-}
-@keyframes animate {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 
@@ -1785,9 +1803,14 @@ body {
   border-radius: 24px;
   padding: 43px 20px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .contacts-item {
-    width: 220px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .contacts-item {
+    width: 440px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2531,6 +2554,9 @@ body {
   background-position: center;
   background-image: url("https://img.icons8.com/metro/26/fa314a/long-arrow-right.png");
   background-repeat: no-repeat;
+  transition-property: background-color, background-image;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-more:focus, .button-more:hover {
   background-color: #d41443;
@@ -2813,9 +2839,10 @@ body {
 
 .slider .slick-dots li.slick-active button {
   border-radius: 0;
-  background-color: #d41342;
+  background-color: transparent;
+  background-image: url(/home.29f6d261.svg);
   background-size: 12px 12px;
-  border-radius: 50%;
+  border: none;
   background-position: center;
 }
 
@@ -2966,8 +2993,8 @@ body {
 .scrollup {
   position: fixed;
   background-color: #ffb8ca;
-  right: 20px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 25px;
   transform: rotate(-90deg);
   padding: 10px;
   align-items: center;
