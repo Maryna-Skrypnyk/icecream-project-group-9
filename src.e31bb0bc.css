@@ -389,8 +389,11 @@ body.menu-open {
   overflow: hidden;
 }
 
-body.modal-open {
+body .modal-open {
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
 
 .container {
@@ -452,10 +455,6 @@ header {
   }
 }
 
-.main-menu {
-  width: 100%;
-}
-
 .logo {
   display: inline-flex;
   cursor: pointer;
@@ -484,6 +483,10 @@ header {
 }
 .logo-picture:hover, .logo-picture:focus {
   transform: scale(1.2);
+}
+
+.main-menu {
+  width: 100%;
 }
 
 .menu {
@@ -572,11 +575,6 @@ header {
   .menu-container {
     position: absolute;
     right: -250px;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -776,6 +774,8 @@ body {
   font-size: 48px;
   line-height: 0.97;
   color: #d41443;
+  animation: blur 1000ms ease-out infinite;
+  text-shadow: 0px 0px 5px #d41443, 0px 0px 7px #d41443;
 }
 @media screen and (min-width: 768px) {
   .hero-title-colored {
@@ -790,6 +790,11 @@ body {
   }
 }
 
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #ffa5ba, 0px 0px 150px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba, 0px -10px 100px #ffa5ba, 0px -10px 100px #ffa5ba;
+  }
+}
 .hero-button-primary,
 .hero-button-secondary {
   display: inline-block;
@@ -919,12 +924,11 @@ body {
   height: 344px;
   border-radius: 50%;
   background-color: #ffa5ba;
-  transition: transform 250ms ease;
 }
 @media screen and (min-width: 768px) {
   .hero-overlay-background {
     top: 31px;
-    left: 42%;
+    left: 38%;
     width: 324px;
     height: 322px;
   }
@@ -932,7 +936,6 @@ body {
 @media screen and (min-width: 1280px) {
   .hero-overlay-background {
     top: 52px;
-    left: 38%;
     width: 538px;
     height: 538px;
   }
@@ -951,7 +954,7 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .hero-overlay-icecream:hover {
     transform: scale(1.1);
   }
@@ -1021,6 +1024,10 @@ body {
   .hero-advantages-number {
     font-size: 46px;
   }
+}
+.hero-advantages-number:hover, .hero-advantages-number:focus {
+  font-size: 60px;
+  text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #ffa5ba, 0px 0px 25px #ffa5ba, 0px 0px 25px #ffa5ba, 0px 0px 25px #d41342, 0px 0px 25px #d41342, 0px 0px 50px #d41342, 0px 0px 50px #ffa5ba, 0px 0px 50px #ffa5ba, 0px 0px 150px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba, 0px 10px 100px #ffa5ba;
 }
 @media screen and (min-width: 768px) {
   .hero-advantages-name {
@@ -2552,14 +2559,10 @@ body {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
-.menu .backdrop {
-  margin-right: 250px;
-}
-
 .modal {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 40px;
   font-family: #d41443;
   font-style: normal;
@@ -2602,8 +2605,8 @@ body {
 
 .modal-button {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 10px;
+  top: 10px;
   padding: 6px;
   border-radius: 50%;
   border: 1px solid transparent;
@@ -2648,7 +2651,7 @@ body {
 
 .mform #comment {
   padding: 12px 16px;
-  height: 120px;
+  height: 60px;
 }
 
 .mform textarea::placeholder {
