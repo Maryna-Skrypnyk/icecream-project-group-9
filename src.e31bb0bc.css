@@ -468,6 +468,9 @@ header {
   text-transform: uppercase;
   color: #d41443;
   margin-left: 20px;
+  transition-property: text-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo img {
   width: 50px;
@@ -557,6 +560,7 @@ header {
   position: fixed;
   right: 30px;
   top: 23px;
+  outline: none;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hamburger--elastic {
@@ -3004,6 +3008,13 @@ body {
   text-align: center;
   width: 40px;
   height: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 479px) {
+  .scrollup {
+    right: 16px;
+    bottom: 16px;
+  }
 }
 
 div.scrollup:hover {
@@ -3027,7 +3038,7 @@ div.scrollup:hover {
   height: 100%;
   font-size: inherit;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .google-maps iframe {
     max-height: 460px;
   }
@@ -3048,6 +3059,12 @@ div.scrollup:hover {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .map {
+    max-height: 530px;
+    top: 50%;
+  }
 }
 @media screen and (min-width: 1280px) {
   .map {
